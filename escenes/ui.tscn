@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://chj6sr5r4wn0s"]
+
+[ext_resource type="Texture2D" uid="uid://cqkao3b7n1as2" path="res://art/UI/Banners/Carved_9Slides.png" id="1_o8jv0"]
+[ext_resource type="Texture2D" uid="uid://h8akji0hx0em" path="res://art/UI/Banners/Banner_Connection_Left.png" id="2_iptlr"]
+[ext_resource type="Texture2D" uid="uid://cvry2omvnsujl" path="res://art/UI/Banners/Banner_Connection_Right.png" id="3_ixe7r"]
+
+[node name="UI" type="Node2D"]
+
+[node name="Carved9Slides" type="Sprite2D" parent="."]
+position = Vector2(640, 356)
+scale = Vector2(7, 3.95833)
+texture = ExtResource("1_o8jv0")
+
+[node name="BannerConnectionLeft" type="Sprite2D" parent="."]
+position = Vector2(448, 320)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("2_iptlr")
+
+[node name="BannerConnectionRight" type="Sprite2D" parent="."]
+position = Vector2(816, 320)
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("3_ixe7r")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
