@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bhuqv44tgmlmp"]
+[gd_scene load_steps=25 format=3 uid="uid://bhuqv44tgmlmp"]
 
 [ext_resource type="Script" path="res://script/enemy.gd" id="1_gdvdu"]
 [ext_resource type="Texture2D" uid="uid://dkw6l7qrjqpwi" path="res://art/Factions/Goblins/Troops/Torch/Red/Torch_Red.png" id="1_y1d3l"]
@@ -27,6 +27,30 @@ region = Rect2(768, 384, 192, 192)
 [sub_resource type="AtlasTexture" id="AtlasTexture_eno61"]
 atlas = ExtResource("1_y1d3l")
 region = Rect2(960, 384, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y26bm"]
+atlas = ExtResource("1_y1d3l")
+region = Rect2(0, 576, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1duwq"]
+atlas = ExtResource("1_y1d3l")
+region = Rect2(192, 576, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cniio"]
+atlas = ExtResource("1_y1d3l")
+region = Rect2(384, 576, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pqfp0"]
+atlas = ExtResource("1_y1d3l")
+region = Rect2(576, 576, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhxtx"]
+atlas = ExtResource("1_y1d3l")
+region = Rect2(768, 576, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvvw2"]
+atlas = ExtResource("1_y1d3l")
+region = Rect2(960, 576, 192, 192)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dm3fx"]
 atlas = ExtResource("1_y1d3l")
@@ -79,6 +103,29 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_y26bm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1duwq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cniio")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pqfp0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jhxtx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fvvw2")
+}],
+"loop": false,
+"name": &"attack_front",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_dm3fx")
 }, {
 "duration": 1.0,
@@ -114,10 +161,7 @@ script = ExtResource("1_gdvdu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_tui44")
-animation = &"attack"
-autoplay = "run"
-frame = 5
-frame_progress = 1.0
+animation = &"attack_front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2, 0)
